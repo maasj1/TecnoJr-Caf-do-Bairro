@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café do Bairro — mockup mobile | TecnoJr</title>
+  <meta name="description" content="Direção visual mobile do Café do Bairro: três telas reais, paleta, tipografia e componentes.">
+  <meta name="theme-color" content="#3A2A20">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ======================================================================
+       Apresentação da direção visual — não faz parte do site da cliente.
+       ====================================================================== */
+    :root {
+      --creme: #FBF6EE;
+      --papel: #F5EADA;
+      --papel-forte: #EFDFC8;
+      --areia: #E6D3B8;
+      --areia-forte: #D8BE9C;
+      --cafe-leite: #C9A57C;
+      --canela: #8A5533;
+      --terracota: #B45434;
+      --terracota-escura: #974226;
+      --terracota-suave: #F3DCCF;
+      --cafe: #3A2A20;
+      --cafe-suave: #6E5747;
+      --oliva: #6F7A4E;
+      --oliva-escura: #4F5E38;
+      --mel: #E2A94F;
+      --mel-suave: #F7E3B8;
+      --erro: #A03A2A;
+      --branco: #FFFCF7;
+      --fonte-titulo: "Fraunces", Georgia, "Times New Roman", serif;
+      --fonte-texto: "Karla", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --fonte-manuscrita: "Caveat", "Segoe Script", cursive;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--fonte-texto);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--cafe);
+      background:
+        radial-gradient(60rem 40rem at 88% -8%, rgba(226, 169, 79, .18), transparent 62%),
+        radial-gradient(48rem 36rem at -10% 34%, rgba(201, 165, 124, .22), transparent 64%),
+        #F0E5D5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, p, figure, dl, dd { margin: 0; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+
+    :focus-visible {
+      outline: 3px solid var(--terracota);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1240px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    .olho {
+      font-family: var(--fonte-texto);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--canela);
+    }
+
+    /* Capa ---------------------------------------------------------------- */
+    .capa {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(48px, 7vw, 84px) 0 clamp(52px, 7vw, 88px);
+      color: var(--creme);
+      background:
+        radial-gradient(44rem 30rem at 90% -10%, rgba(226, 169, 79, .24), transparent 62%),
+        radial-gradient(36rem 28rem at 6% 100%, rgba(180, 84, 52, .3), transparent 66%),
+        var(--cafe);
+    }
+    .capa::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: .16;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+    }
+    .capa .wrap { position: relative; z-index: 1; }
+
+    .capa .olho { color: var(--mel-suave); }
+
+    .capa h1 {
+      margin: 14px 0 10px;
+      font-family: var(--fonte-titulo);
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      font-weight: 600;
+      line-height: .98;
+      letter-spacing: -.035em;
+    }
+    .capa h1 em {
+      font-style: normal;
+      color: var(--mel);
+    }
+
+    .capa__linha {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .capa__texto { max-width: 560px; }
+    .capa__descricao {
+      max-width: 48ch;
+      color: rgba(251, 246, 238, .78);
+      font-size: 1.05rem;
+    }
+    .capa__assinatura {
+      font-family: var(--fonte-manuscrita);
+      font-size: 1.45rem;
+      color: var(--mel-suave);
+      transform: rotate(-1.5deg);
+      white-space: nowrap;
+    }
+
+    .conceito {
+      display: grid;
+      gap: 6px;
+      max-width: 760px;
+      margin-top: 38px;
+      padding: 24px 26px 26px;
+      border: 1px solid rgba(226, 169, 79, .35);
+      border-radius: 20px;
+      background: rgba(251, 246, 238, .07);
+      backdrop-filter: blur(2px);
+    }
+    .conceito__rotulo {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--mel);
+    }
+    .conceito__frase {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -.015em;
+      color: var(--creme);
+    }
+    .conceito__texto {
+      max-width: 64ch;
+      color: rgba(251, 246, 238, .7);
+      font-size: .95rem;
+    }
+
+    .ficha {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px 28px;
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(251, 246, 238, .16);
+    }
+    .ficha dt {
+      margin-bottom: 3px;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--mel);
+    }
+    .ficha dd {
+      font-size: .88rem;
+      line-height: 1.45;
+      color: rgba(251, 246, 238, .84);
+    }
+
+    /* Seções -------------------------------------------------------------- */
+    .secao { padding: clamp(52px, 7vw, 86px) 0; }
+    .secao--papel {
+      background: var(--papel);
+      border-block: 1px solid rgba(216, 190, 156, .65);
+    }
+
+    .secao__topo {
+      display: grid;
+      gap: 8px;
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+    .secao__topo h2 {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -.022em;
+      text-wrap: balance;
+    }
+    .secao__topo p:last-child {
+      max-width: 62ch;
+      color: var(--cafe-suave);
+    }
+
+    /* Telas --------------------------------------------------------------- */
+    .telas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(20px, 2.2vw, 28px);
+    }
+
+    .tela {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      width: 378px;
+      max-width: 100%;
+    }
+
+    .tela__legenda {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      width: 100%;
+      font-size: .78rem;
+      color: var(--cafe-suave);
+    }
+    .tela__legenda strong {
+      font-family: var(--fonte-titulo);
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: var(--cafe);
+    }
+    .tela__legenda span {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      color: var(--terracota);
+    }
+    .tela__legenda em {
+      margin-left: auto;
+      font-style: normal;
+      font-size: .68rem;
+      color: var(--cafe-suave);
+    }
+
+    .celular {
+      display: flex;
+      flex-direction: column;
+      width: 378px;
+      height: 812px;
+      max-width: 100%;
+      overflow: hidden;
+      border: 9px solid #2B211B;
+      border-radius: 46px;
+      background: var(--creme);
+      box-shadow:
+        0 2px 0 rgba(255, 255, 255, .35) inset,
+        0 32px 64px -26px rgba(58, 42, 32, .55),
+        0 0 0 1px rgba(58, 42, 32, .35);
+    }
+
+    .celular__status {
+      display: flex;
+      flex: none;
+      align-items: center;
+      justify-content: space-between;
+      height: 30px;
+      padding: 0 18px;
+      background: var(--creme);
+      color: var(--cafe);
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .celular__status svg { display: block; }
+    .celular__sinais {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .celular iframe {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      background: var(--creme);
+    }
+
+    .tela__link {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--terracota-escura);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .tela__link:hover { color: var(--cafe); }
+
+    .nota {
+      max-width: 72ch;
+      margin: 30px auto 0;
+      padding: 12px 16px;
+      border-left: 3px solid var(--areia-forte);
+      color: var(--cafe-suave);
+      font-size: .8rem;
+      line-height: 1.55;
+    }
+    .nota strong { color: var(--cafe); }
+
+    /* Paleta -------------------------------------------------------------- */
+    .paleta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+      gap: 14px;
+    }
+
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--areia);
+      border-radius: 16px;
+      background: var(--branco);
+      box-shadow: 0 14px 28px -26px rgba(58, 42, 32, .6);
+    }
+    .swatch__cor {
+      height: 76px;
+      background: var(--swatch);
+      border-bottom: 1px solid rgba(58, 42, 32, .08);
+    }
+    .swatch__info { padding: 10px 12px 12px; }
+    .swatch__nome {
+      display: block;
+      font-size: .74rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .swatch__hex {
+      display: block;
+      margin-top: 1px;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      color: var(--terracota-escura);
+    }
+    .swatch__uso {
+      display: block;
+      margin-top: 6px;
+      font-size: .68rem;
+      line-height: 1.4;
+      color: var(--cafe-suave);
+    }
+
+    .paleta__nota {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+    .paleta__nota p {
+      padding: 12px 14px;
+      border: 1px solid var(--areia);
+      border-radius: 12px;
+      background: rgba(255, 252, 247, .6);
+      font-size: .78rem;
+      line-height: 1.5;
+      color: var(--cafe-suave);
+    }
+    .paleta__nota strong { color: var(--cafe); }
+
+    /* Tipografia ---------------------------------------------------------- */
+    .tipos {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+    }
+    .tipo-card {
+      padding: 24px;
+      border: 1px solid var(--areia);
+      border-radius: 20px;
+      background: var(--branco);
+    }
+    .tipo-card--escuro {
+      background: var(--cafe);
+      border-color: var(--cafe);
+      color: var(--creme);
+    }
+    .tipo-card__rotulo {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--canela);
+    }
+    .tipo-card--escuro .tipo-card__rotulo { color: var(--mel); }
+    .tipo-card__rotulo em {
+      font-style: normal;
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 500;
+      color: var(--cafe-suave);
+    }
+    .tipo-card--escuro .tipo-card__rotulo em { color: rgba(251, 246, 238, .6); }
+
+    .amostra-display {
+      font-family: var(--fonte-titulo);
+      font-size: clamp(2rem, 4.4vw, 3rem);
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -.03em;
+      text-wrap: balance;
+    }
+    .amostra-h2 {
+      margin-top: 18px;
+      font-family: var(--fonte-titulo);
+      font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -.02em;
+    }
+    .amostra-corpo {
+      margin-top: 14px;
+      max-width: 44ch;
+      color: var(--cafe-suave);
+      font-size: .98rem;
+      line-height: 1.65;
+    }
+    .tipo-card--escuro .amostra-corpo { color: rgba(251, 246, 238, .74); }
+    .amostra-rabisco {
+      font-family: var(--fonte-manuscrita);
+      font-size: 2rem;
+      line-height: 1.1;
+      color: var(--terracota);
+      transform: rotate(-1.5deg);
+      display: inline-block;
+    }
+    .tipo-card--escuro .amostra-rabisco { color: var(--mel); }
+
+    .tipo-lista {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--areia);
+      font-size: .8rem;
+      color: var(--cafe-suave);
+    }
+    .tipo-lista div { display: flex; justify-content: space-between; gap: 16px; }
+    .tipo-lista b { color: var(--cafe); font-weight: 700; }
+    .tipo-card--escuro .tipo-lista { border-color: rgba(251, 246, 238, .16); color: rgba(251, 246, 238, .65); }
+    .tipo-card--escuro .tipo-lista b { color: var(--creme); }
+
+    /* Componentes --------------------------------------------------------- */
+    .componentes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+    .comp {
+      padding: 22px;
+      border: 1px solid var(--areia);
+      border-radius: 20px;
+      background: var(--branco);
+    }
+    .comp__rotulo {
+      margin-bottom: 14px;
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--canela);
+    }
+
+    .botoes { display: grid; gap: 10px; }
+    .botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 13px 24px;
+      border: 1.5px solid transparent;
+      border-radius: 999px;
+      font-family: var(--fonte-texto);
+      font-size: .95rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .botao--primario {
+      background: var(--terracota);
+      color: #FFF8F0;
+      box-shadow: 0 10px 22px -12px rgba(180, 84, 52, .9);
+    }
+    .botao--fantasma {
+      background: transparent;
+      border-color: var(--areia);
+      color: var(--cafe);
+    }
+    .botao--whatsapp {
+      background: var(--oliva-escura);
+      color: #FFF9EE;
+      box-shadow: 0 10px 22px -14px rgba(79, 94, 56, .9);
+    }
+
+    .campo { display: grid; gap: 6px; }
+    .campo label { font-size: .86rem; font-weight: 700; }
+    .campo input,
+    .campo select {
+      width: 100%;
+      min-height: 52px;
+      padding: 13px 15px;
+      border: 1.5px solid var(--areia);
+      border-radius: 14px;
+      background: #FFFDF9;
+      color: var(--cafe);
+      font: inherit;
+      font-size: .95rem;
+    }
+    .campo input[data-foco] {
+      border-color: var(--terracota);
+      background: #fff;
+      box-shadow: 0 0 0 4px rgba(180, 84, 52, .14);
+      outline: none;
+    }
+    .campo input[data-erro] {
+      border-color: var(--erro);
+      box-shadow: 0 0 0 4px rgba(160, 58, 42, .1);
+    }
+    .campo__erro { color: var(--erro); font-size: .76rem; font-weight: 600; }
+    .campo__ajuda { color: var(--cafe-suave); font-size: .76rem; }
+
+    .item-demo {
+      position: relative;
+      padding: 18px;
+      border: 1px solid var(--areia);
+      border-radius: 18px;
+      background: var(--branco);
+    }
+    .item-demo__selo {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--oliva-escura);
+      color: #FFF9EE;
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .item-demo__topo {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .item-demo h3 {
+      font-family: var(--fonte-titulo);
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    .item-demo__preco {
+      color: var(--terracota);
+      font-family: var(--fonte-titulo);
+      font-size: 1.1rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .item-demo__preco span { font-size: .72em; }
+    .item-demo p {
+      margin-top: 6px;
+      color: var(--cafe-suave);
+      font-size: .84rem;
+      line-height: 1.5;
+    }
+    .item-demo small {
+      display: block;
+      margin-top: 10px;
+      color: var(--cafe-suave);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 11px;
+      border: 1px solid rgba(111, 122, 78, .3);
+      border-radius: 999px;
+      background: rgba(111, 122, 78, .12);
+      color: var(--oliva-escura);
+      font-size: .72rem;
+      font-weight: 700;
+    }
+    .chip::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .chip--fechado {
+      border-color: rgba(169, 113, 75, .32);
+      background: rgba(169, 113, 75, .12);
+      color: var(--canela);
+    }
+    .chip--lotado {
+      border-color: rgba(160, 58, 42, .3);
+      background: rgba(160, 58, 42, .09);
+      color: var(--erro);
+    }
+    .chip--mel {
+      border-color: rgba(226, 169, 79, .5);
+      background: var(--mel-suave);
+      color: var(--cafe);
+    }
+
+    /* Fotos --------------------------------------------------------------- */
+    .fotos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .foto-card {
+      padding: 20px;
+      border: 1px solid var(--areia);
+      border-radius: 18px;
+      background: var(--branco);
+    }
+    .foto-card h3 {
+      margin-bottom: 8px;
+      font-family: var(--fonte-titulo);
+      font-size: 1.06rem;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+    .foto-card p, .foto-card li {
+      color: var(--cafe-suave);
+      font-size: .82rem;
+      line-height: 1.55;
+    }
+    .foto-card ul { margin: 8px 0 0; padding-left: 18px; }
+    .foto-card li + li { margin-top: 4px; }
+
+    .lista-tomas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+      padding: 0;
+      list-style: none;
+    }
+    .lista-tomas li {
+      display: flex;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--areia);
+      border-radius: 12px;
+      background: rgba(255, 252, 247, .6);
+      font-size: .8rem;
+      color: var(--cafe-suave);
+    }
+    .lista-tomas b {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--mel-suave);
+      color: var(--cafe);
+      font-size: .68rem;
+    }
+
+    /* Rodapé -------------------------------------------------------------- */
+    .rodape {
+      padding: 34px 0 44px;
+      color: rgba(251, 246, 238, .72);
+      background: var(--cafe);
+      font-size: .8rem;
+    }
+    .rodape__grade {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .rodape strong { color: var(--creme); }
+    .rodape__frase {
+      font-family: var(--fonte-manuscrita);
+      font-size: 1.35rem;
+      color: var(--mel-suave);
+      transform: rotate(-1.5deg);
+    }
+
+    /* Responsivo ---------------------------------------------------------- */
+    @media (max-width: 980px) {
+      .tipos { grid-template-columns: 1fr; }
+      .ficha { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 820px) {
+      .tela { width: 100%; max-width: 378px; }
+      .celular { width: 100%; }
+    }
+
+    @media (max-width: 430px) {
+      .wrap { padding-inline: 18px; }
+      .celular {
+        height: 690px;
+        border-width: 8px;
+        border-radius: 38px;
+      }
+      .ficha { grid-template-columns: 1fr; gap: 12px; }
+      .conceito { padding: 18px 18px 20px; }
+      .comp, .tipo-card, .foto-card { padding: 18px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="capa">
+    <div class="wrap">
+      <div class="capa__linha">
+        <div class="capa__texto">
+          <p class="olho">TecnoJr · direção visual · novembro de 2026</p>
+          <h1>Café do <em>Bairro</em></h1>
+          <p class="capa__descricao">
+            Site mobile-first para a Dona Marta vender bolo caseiro, panetone e café coado
+            sem perder encomenda no meio das mensagens.
+          </p>
+        </div>
+        <p class="capa__assinatura">feito com carinho,<br>como o bolo dela</p>
+      </div>
+
+      <div class="conceito">
+        <span class="conceito__rotulo">frase-conceito</span>
+        <p class="conceito__frase">“O caderno de receitas da Dona Marta, aberto no balcão.”</p>
+        <p class="conceito__texto">
+          Papel quente, terracota de panela de barro e letra à mão na margem. O afeto vem da
+          textura e da conversa — não de ursinho, coração ou vitrine de shopping.
+        </p>
+      </div>
+
+      <dl class="ficha">
+        <div><dt>Formato</dt><dd>Mobile-first · 320 a 1440 px</dd></div>
+        <div><dt>Paleta</dt><dd>Creme, terracota e café</dd></div>
+        <div><dt>Tipos</dt><dd>Fraunces · Karla · Caveat</dd></div>
+        <div><dt>Acessibilidade</dt><dd>WCAG 2.1 AA · alvos de 52 px</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 01 · TELAS -->
+    <section class="secao" id="telas">
+      <div class="wrap">
+        <div class="secao__topo">
+          <p class="olho">01 · telas</p>
+          <h2>Três telas, uma decisão por vez</h2>
+          <p>
+            Home para se apresentar, cardápio para escolher e encomenda para resolver.
+            O celular é o meio, não uma versão reduzida do desktop.
+          </p>
+        </div>
+
+        <div class="telas">
+          <figure class="tela">
+            <figcaption class="tela__legenda">
+              <span>01</span><strong>Home</strong><em>360 × 764</em>
+            </figcaption>
+            <div class="celular">
+              <div class="celular__status" aria-hidden="true">
+                <span>9:41</span>
+                <span class="celular__sinais">
+                  <svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor"><rect x="0" y="6" width="3" height="4" rx="1"/><rect x="4" y="4" width="3" height="6" rx="1"/><rect x="8" y="2" width="3" height="8" rx="1"/><rect x="12" y="0" width="3" height="10" rx="1"/></svg>
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 3.5a9 9 0 0 1 12 0M3.2 6a5.6 5.6 0 0 1 7.6 0M6.9 8.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x=".7" y=".7" width="16" height="8.6" rx="2.2" stroke="currentColor" stroke-width="1.2"/><rect x="2.5" y="2.5" width="11" height="5" rx="1" fill="currentColor"/><path d="M18.4 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <iframe src="../frontend/index.html#inicio" title="Tela inicial do Café do Bairro" loading="eager"></iframe>
+            </div>
+            <a class="tela__link" href="../frontend/index.html#inicio" target="_blank" rel="noopener">Abrir a home em tela cheia ↗</a>
+          </figure>
+
+          <figure class="tela">
+            <figcaption class="tela__legenda">
+              <span>02</span><strong>Cardápio</strong><em>360 × 764</em>
+            </figcaption>
+            <div class="celular">
+              <div class="celular__status" aria-hidden="true">
+                <span>9:41</span>
+                <span class="celular__sinais">
+                  <svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor"><rect x="0" y="6" width="3" height="4" rx="1"/><rect x="4" y="4" width="3" height="6" rx="1"/><rect x="8" y="2" width="3" height="8" rx="1"/><rect x="12" y="0" width="3" height="10" rx="1"/></svg>
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 3.5a9 9 0 0 1 12 0M3.2 6a5.6 5.6 0 0 1 7.6 0M6.9 8.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x=".7" y=".7" width="16" height="8.6" rx="2.2" stroke="currentColor" stroke-width="1.2"/><rect x="2.5" y="2.5" width="11" height="5" rx="1" fill="currentColor"/><path d="M18.4 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <iframe src="../frontend/index.html#cardapio" title="Tela do cardápio do Café do Bairro" loading="eager"></iframe>
+            </div>
+            <a class="tela__link" href="../frontend/index.html#cardapio" target="_blank" rel="noopener">Abrir o cardápio em tela cheia ↗</a>
+          </figure>
+
+          <figure class="tela">
+            <figcaption class="tela__legenda">
+              <span>03</span><strong>Encomenda</strong><em>360 × 764</em>
+            </figcaption>
+            <div class="celular">
+              <div class="celular__status" aria-hidden="true">
+                <span>9:41</span>
+                <span class="celular__sinais">
+                  <svg width="15" height="10" viewBox="0 0 15 10" fill="currentColor"><rect x="0" y="6" width="3" height="4" rx="1"/><rect x="4" y="4" width="3" height="6" rx="1"/><rect x="8" y="2" width="3" height="8" rx="1"/><rect x="12" y="0" width="3" height="10" rx="1"/></svg>
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M1 3.5a9 9 0 0 1 12 0M3.2 6a5.6 5.6 0 0 1 7.6 0M6.9 8.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                  <svg width="20" height="10" viewBox="0 0 20 10" fill="none"><rect x=".7" y=".7" width="16" height="8.6" rx="2.2" stroke="currentColor" stroke-width="1.2"/><rect x="2.5" y="2.5" width="11" height="5" rx="1" fill="currentColor"/><path d="M18.4 3.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </span>
+              </div>
+              <iframe src="../frontend/index.html#encomendar" title="Tela de encomenda do Café do Bairro" loading="eager"></iframe>
+            </div>
+            <a class="tela__link" href="../frontend/index.html#encomendar" target="_blank" rel="noopener">Abrir a encomenda em tela cheia ↗</a>
+          </figure>
+        </div>
+
+        <p class="nota">
+          <strong>As molduras acima são o site real</strong>, carregado em iframes de 360 px.
+          Role dentro de cada tela ou abra em tela cheia. Se o navegador bloquear os iframes,
+          abra <code>frontend/index.html</code> diretamente.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02 · PALETA -->
+    <section class="secao secao--papel" id="paleta">
+      <div class="wrap">
+        <div class="secao__topo">
+          <p class="olho">02 · paleta</p>
+          <h2>Cores de cozinha, não de vitrine</h2>
+          <p>
+            Creme de papel, terracota de panela, café coado e um mel que só aparece em
+            dezembro. A cor de ação é uma só: terracota.
+          </p>
+        </div>
+
+        <div class="paleta">
+          <div class="swatch" style="--swatch:#FBF6EE"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Creme</span><span class="swatch__hex">#FBF6EE</span><span class="swatch__uso">Fundo padrão</span></div></div>
+          <div class="swatch" style="--swatch:#F5EADA"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Papel</span><span class="swatch__hex">#F5EADA</span><span class="swatch__uso">Seções alternadas</span></div></div>
+          <div class="swatch" style="--swatch:#E6D3B8"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Areia</span><span class="swatch__hex">#E6D3B8</span><span class="swatch__uso">Bordas e divisores</span></div></div>
+          <div class="swatch" style="--swatch:#C9A57C"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Café com leite</span><span class="swatch__hex">#C9A57C</span><span class="swatch__uso">Ilustração e ornamento</span></div></div>
+          <div class="swatch" style="--swatch:#B45434"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Terracota</span><span class="swatch__hex">#B45434</span><span class="swatch__uso">Ação principal</span></div></div>
+          <div class="swatch" style="--swatch:#8A5533"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Canela</span><span class="swatch__hex">#8A5533</span><span class="swatch__uso">Ícones e apoio</span></div></div>
+          <div class="swatch" style="--swatch:#3A2A20"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Café</span><span class="swatch__hex">#3A2A20</span><span class="swatch__uso">Texto principal</span></div></div>
+          <div class="swatch" style="--swatch:#6E5747"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Café suave</span><span class="swatch__hex">#6E5747</span><span class="swatch__uso">Texto secundário</span></div></div>
+          <div class="swatch" style="--swatch:#4F5E38"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Oliva escura</span><span class="swatch__hex">#4F5E38</span><span class="swatch__uso">Sucesso e WhatsApp</span></div></div>
+          <div class="swatch" style="--swatch:#E2A94F"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Mel</span><span class="swatch__hex">#E2A94F</span><span class="swatch__uso">Destaque de dezembro</span></div></div>
+          <div class="swatch" style="--swatch:#F3DCCF"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Terracota suave</span><span class="swatch__hex">#F3DCCF</span><span class="swatch__uso">Fundos de destaque</span></div></div>
+          <div class="swatch" style="--swatch:#A03A2A"><div class="swatch__cor"></div><div class="swatch__info"><span class="swatch__nome">Erro</span><span class="swatch__hex">#A03A2A</span><span class="swatch__uso">Erro e dia lotado</span></div></div>
+        </div>
+
+        <div class="paleta__nota">
+          <p><strong>Contraste:</strong> café sobre creme fica em 12,74:1 (AAA). Terracota com texto branco fica em 4,82:1 (AA).</p>
+          <p><strong>Regra:</strong> oliva puro só em ornamento. Texto em oliva usa <code>#4F5E38</code> (6,53:1).</p>
+          <p><strong>Proporção:</strong> 70% neutros quentes, 20% café, 10% terracota/mel. Cor de ação nunca se repete na mesma tela.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · TIPOGRAFIA -->
+    <section class="secao" id="tipografia">
+      <div class="wrap">
+        <div class="secao__topo">
+          <p class="olho">03 · tipografia</p>
+          <h2>Serifa de caderno, texto de balcão</h2>
+          <p>
+            Fraunces dá personalidade aos títulos, Karla garante leitura no celular e Caveat
+            entra só como assinatura à mão. Três famílias, papéis bem separados.
+          </p>
+        </div>
+
+        <div class="tipos">
+          <div class="tipo-card">
+            <p class="tipo-card__rotulo"><span>Fraunces</span><em>display · 600</em></p>
+            <p class="amostra-display">Bolo de vó, café coado e encomenda sem correria.</p>
+            <p class="amostra-h2">O que sai da cozinha da Dona Marta</p>
+            <p class="amostra-corpo">
+              A serifa com personalidade carrega o afeto. No corpo, quem assume é a Karla,
+              porque ninguém deve apertar os olhos para ler um preço.
+            </p>
+            <div class="tipo-lista">
+              <div><span>H1 mobile → desktop</span><b>33,6 → 66,4 px</b></div>
+              <div><span>H2 mobile → desktop</span><b>28 → 43,2 px</b></div>
+              <div><span>Entrelinha</span><b>1,03 – 1,15</b></div>
+            </div>
+          </div>
+
+          <div class="tipo-card tipo-card--escuro">
+            <p class="tipo-card__rotulo"><span>Karla + Caveat</span><em>texto · interface</em></p>
+            <span class="amostra-rabisco">cardápio</span>
+            <p class="amostra-corpo" style="margin-top:8px">
+              Karla em 17 px, entrelinha 1,65, no máximo 62 caracteres por linha. Caveat só
+              em eyebrows e legendas curtas, sempre com uma leve rotação de −1,5°.
+            </p>
+            <div class="tipo-lista">
+              <div><span>Corpo</span><b>17 px / 28 px</b></div>
+              <div><span>Apoio</span><b>14,7 px</b></div>
+              <div><span>Rabisco</span><b>26 px</b></div>
+              <div><span>Peso do corpo</span><b>400</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · COMPONENTES -->
+    <section class="secao secao--papel" id="componentes">
+      <div class="wrap">
+        <div class="secao__topo">
+          <p class="olho">04 · componentes</p>
+          <h2>Peças grandes, estados claros</h2>
+          <p>
+            Botão de 52 px, campo de 52 px, foco visível e erro escrito com gentileza. Tudo
+            pensado para o dedo e para a pressa de quem encomenda no intervalo do trabalho.
+          </p>
+        </div>
+
+        <div class="componentes">
+          <div class="comp">
+            <p class="comp__rotulo">Botões</p>
+            <div class="botoes">
+              <span class="botao botao--primario">Quero encomendar</span>
+              <span class="botao botao--fantasma">Ver cardápio</span>
+              <span class="botao botao--whatsapp">Enviar pelo WhatsApp</span>
+            </div>
+          </div>
+
+          <div class="comp">
+            <p class="comp__rotulo">Campo em foco</p>
+            <div class="campo">
+              <label for="demo-nome">Seu nome</label>
+              <input id="demo-nome" type="text" value="Ana Clara" data-foco>
+              <span class="campo__ajuda">Como a Dona Marta te chama?</span>
+            </div>
+          </div>
+
+          <div class="comp">
+            <p class="comp__rotulo">Campo com erro</p>
+            <div class="campo">
+              <label for="demo-tel">WhatsApp com DDD</label>
+              <input id="demo-tel" type="tel" value="(83) 9999" data-erro aria-invalid="true" aria-describedby="demo-tel-erro">
+              <span class="campo__erro" id="demo-tel-erro">O telefone deve ter 10 ou 11 dígitos, com DDD.</span>
+            </div>
+          </div>
+
+          <div class="comp">
+            <p class="comp__rotulo">Item de cardápio</p>
+            <div class="item-demo">
+              <span class="item-demo__selo">mais pedido</span>
+              <div class="item-demo__topo">
+                <h3>Bolo de cenoura</h3>
+                <p class="item-demo__preco"><span>R$</span> 55</p>
+              </div>
+              <p>Massa fofinha de cenoura com cobertura de chocolate meio amargo.</p>
+              <small>inteiro · serve 12 fatias</small>
+            </div>
+          </div>
+
+          <div class="comp">
+            <p class="comp__rotulo">Status e vagas</p>
+            <div class="chips">
+              <span class="chip">Aberto agora</span>
+              <span class="chip chip--fechado">Fechado · abre 7h</span>
+              <span class="chip chip--mel">3 vagas neste dia</span>
+              <span class="chip chip--lotado">Dia completo</span>
+            </div>
+            <p class="campo__ajuda" style="margin-top:12px">
+              Cor nunca sozinha: sempre acompanhada de palavra. “Dia completo” também aparece
+              no texto de erro do formulário.
+            </p>
+          </div>
+
+          <div class="comp">
+            <p class="comp__rotulo">Regras de toque</p>
+            <div class="tipo-lista" style="margin-top:0;padding-top:0;border-top:0">
+              <div><span>Alvo mínimo</span><b>52 px</b></div>
+              <div><span>Foco</span><b>3 px terracota</b></div>
+              <div><span>Raio de botão</span><b>999 px</b></div>
+              <div><span>Raio de card</span><b>20 / 26 px</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · FOTOS -->
+    <section class="secao" id="fotos">
+      <div class="wrap">
+        <div class="secao__topo">
+          <p class="olho">05 · fotos</p>
+          <h2>Migalha na mesa vale mais que estúdio</h2>
+          <p>
+            As ilustrações atuais são provisórias. Quando a Marta liberar as fotos, a regra é
+            simples: luz de janela, comida de verdade e uma imperfeição por quadro.
+          </p>
+        </div>
+
+        <div class="fotos">
+          <div class="foto-card">
+            <h3>Luz</h3>
+            <ul>
+              <li>Janela pela manhã, 7h–10h.</li>
+              <li>Sem flash direto; contraluz suave no café.</li>
+              <li>Balanço quente, sem amarelar a comida.</li>
+            </ul>
+          </div>
+          <div class="foto-card">
+            <h3>Composição</h3>
+            <ul>
+              <li>4:5 no hero, 1:1 nos cards.</li>
+              <li>Bolo a 45°, com uma fatia retirada.</li>
+              <li>Migalha, pano amassado, xícara fora do centro.</li>
+            </ul>
+          </div>
+          <div class="foto-card">
+            <h3>Evitar</h3>
+            <ul>
+              <li>Banco de imagens e fundo branco infinito.</li>
+              <li>Filtro pesado, HDR, prato brilhando.</li>
+              <li>Rosto de cliente sem autorização.</li>
+            </ul>
+          </div>
+        </div>
+
+        <ol class="lista-tomas">
+          <li><b>1</b><span><strong>Hero:</strong> bolo inteiro com fatia retirada, 4:5.</span></li>
+          <li><b>2</b><span><strong>Quem faz:</strong> mãos cortando a fatia, close 1:1.</span></li>
+          <li><b>3</b><span><strong>Café:</strong> coador com vapor, contraluz.</span></li>
+          <li><b>4</b><span><strong>Pão de queijo:</strong> bandeja saindo do forno, 1:1.</span></li>
+          <li><b>5</b><span><strong>Marta:</strong> retrato rindo, avental, janela ao fundo.</span></li>
+          <li><b>6</b><span><strong>Fachada:</strong> placa e balcão no início da manhã.</span></li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div>
+        <strong>Café do Bairro · direção visual mobile</strong><br>
+        TecnoJr · novembro de 2026 · guia completo em <code>design/direcao-visual.md</code>
+      </div>
+      <p class="rodape__frase">bolo bom não tem pressa</p>
+    </div>
+  </footer>
+
+  <script>
+    /*
+     * Posiciona cada iframe na âncora pedida. O navegador nem sempre respeita
+     * o hash de um iframe carregado junto com a página; aqui garantimos a tela
+     * certa e escondemos a barra de rolagem interna para manter a moldura limpa.
+     * Se as origens forem diferentes, o try/catch mantém os links de tela cheia.
+     */
+    (() => {
+      const telas = Array.from(document.querySelectorAll('.celular iframe'));
+
+      const ajustar = (frame) => {
+        try {
+          const doc = frame.contentDocument;
+          const win = frame.contentWindow;
+          if (!doc || !win || !doc.documentElement) return;
+
+          if (!doc.getElementById('mockup-scroll')) {
+            const estilo = doc.createElement('style');
+            estilo.id = 'mockup-scroll';
+            estilo.textContent =
+              'html{scrollbar-width:none!important}' +
+              'html::-webkit-scrollbar{display:none!important}';
+            (doc.head || doc.documentElement).appendChild(estilo);
+          }
+
+          const alvo = (frame.getAttribute('src').split('#')[1]) || 'inicio';
+          const elemento = doc.getElementById(alvo);
+          if (!elemento) return;
+
+          const topo = elemento.getBoundingClientRect().top + win.scrollY - 88;
+          const anterior = doc.documentElement.style.scrollBehavior;
+          doc.documentElement.style.scrollBehavior = 'auto';
+          win.scrollTo(0, Math.max(0, topo));
+          doc.documentElement.style.scrollBehavior = anterior;
+        } catch (erro) {
+          /* Origem diferente: as telas continuam visíveis e os links abrem em tela cheia. */
+        }
+      };
+
+      telas.forEach((frame) => {
+        frame.addEventListener('load', () => {
+          ajustar(frame);
+          setTimeout(() => ajustar(frame), 120);
+          setTimeout(() => ajustar(frame), 500);
+          setTimeout(() => ajustar(frame), 1200);
+        });
+
+        if (frame.contentDocument?.readyState === 'complete') ajustar(frame);
+      });
+    })();
+  </script>
+
+</body>
+</html>

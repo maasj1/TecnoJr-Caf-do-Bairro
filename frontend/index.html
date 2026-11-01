@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café do Bairro — bolos caseiros por encomenda</title>
+  <meta name="description" content="Bolos caseiros da Dona Marta, café coado e pão de queijo. Veja o cardápio, o horário, o endereço e faça sua encomenda em um minuto.">
+  <meta name="theme-color" content="#FBF6EE">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Café do Bairro — bolos caseiros por encomenda">
+  <meta property="og:description" content="Bolo de vó, café coado e encomenda sem correria. Só 5 bolos por dia.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Café do Bairro",
+    "description": "Bolos caseiros por encomenda, café coado e pão de queijo.",
+    "servesCuisine": ["Café", "Bolos caseiros"],
+    "priceRange": "R$",
+    "telephone": "+55 83 99999-9999",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua das Laranjeiras, 123",
+      "addressLocality": "João Pessoa",
+      "addressRegion": "PB",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "07:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "07:00", "closes": "13:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "07:00", "closes": "12:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo" data-topo>
+    <div class="container topo__conteudo">
+      <a class="marca" href="#inicio">
+        <svg class="marca__icone" viewBox="0 0 64 64" fill="none" aria-hidden="true" focusable="false">
+          <path d="M13.5 27.5h30.5v10.5a12.5 12.5 0 0 1-12.5 12.5h-5.5a12.5 12.5 0 0 1-12.5-12.5V27.5Z" fill="#C9A57C" stroke="#3A2A20" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M44.5 30.5h3.8a6.2 6.2 0 0 1 0 12.4h-3.8" stroke="#3A2A20" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M10 54.5h41" stroke="#3A2A20" stroke-width="3" stroke-linecap="round"/>
+          <path d="M22 19.5c0-3 3-3.4 3-6.4M30 19.5c0-3 3-3.4 3-6.4M38 19.5c0-3 3-3.4 3-6.4" stroke="#A9714B" stroke-width="2.6" stroke-linecap="round"/>
+        </svg>
+        <span class="marca__texto">
+          <strong>Café do Bairro</strong>
+          <small>bolos caseiros &amp; café coado</small>
+        </span>
+      </a>
+
+      <nav class="nav-topo" aria-label="Seções do site">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#encomendar">Encomendar</a>
+        <a href="#horario">Horário</a>
+        <a href="#onde-fica">Onde fica</a>
+      </nav>
+
+      <a class="botao botao--pequeno botao--primario topo__acao" href="#encomendar">Encomendar</a>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grade">
+        <div class="hero__texto">
+          <p class="etiqueta-status" data-status-loja>
+            <span class="bolinha" aria-hidden="true"></span>
+            <span id="status-loja-texto">Aberto de terça a domingo</span>
+          </p>
+
+          <h1>Bolo de vó, café coado e <em class="marca-texto">encomenda</em> sem correria.</h1>
+
+          <p class="hero__descricao">
+            O Café do Bairro é da Dona Marta. Aqui você vê o cardápio, o horário e o endereço —
+            e reserva seu bolo em um minuto, sem precisar mandar mensagem.
+          </p>
+
+          <div class="hero__acoes">
+            <a class="botao botao--primario" href="#encomendar">Quero encomendar</a>
+            <a class="botao botao--fantasma" href="#cardapio">Ver cardápio</a>
+          </div>
+
+          <p class="hero__nota">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/></svg>
+            Encomendas com 2 dias de antecedência
+          </p>
+        </div>
+
+        <div class="hero__arte">
+          <figure class="polaroid">
+            <span class="fita" aria-hidden="true"></span>
+            <img src="assets/ilustracao-bolo.svg" width="480" height="400" alt="Ilustração de um bolo de cenoura com cobertura de chocolate ao lado de uma xícara de café.">
+            <figcaption>feito hoje, com carinho</figcaption>
+          </figure>
+          <p class="selo" aria-hidden="true">5 bolos<br>por dia</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAIXA DE PROVAS -->
+    <div class="faixa" aria-label="Diferenciais do Café do Bairro">
+      <ul class="container faixa__lista">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 8h11v5a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M16 9h1.8a2.7 2.7 0 0 1 0 5.4H16M3 21h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Café coado na hora
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20h16M6 20V9h12v11M4 9h16l-8-5-8 5ZM10 13h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Bolo feito no dia
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M8 3v4M16 3v4M4 10h16M9 15h2M13 15h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Só 5 encomendas por dia
+        </li>
+      </ul>
+    </div>
+
+    <!-- CARDÁPIO -->
+    <section class="secao" id="cardapio">
+      <div class="container">
+        <header class="secao__cabecalho revelar">
+          <p class="rabisco">cardápio</p>
+          <h2>O que sai da cozinha da Dona Marta</h2>
+          <p class="secao__descricao">
+            Tudo feito no dia, com receita de família. Os bolos inteiros são por encomenda,
+            com 2 dias de antecedência.
+          </p>
+        </header>
+
+        <div class="grupo-cardapio revelar">
+          <h3 class="grupo-cardapio__titulo">Bolos por encomenda <span>o carro-chefe</span></h3>
+          <ul class="grade-cards">
+            <li class="item">
+              <span class="selo-item">mais pedido</span>
+              <div class="item__cabecalho">
+                <h4>Bolo de cenoura</h4>
+                <p class="item__preco"><span>R$</span> 55</p>
+              </div>
+              <p class="item__descricao">Massa fofinha de cenoura com cobertura de chocolate meio amargo.</p>
+              <p class="item__detalhe">inteiro · serve 12 fatias</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Bolo de chocolate</h4>
+                <p class="item__preco"><span>R$</span> 65</p>
+              </div>
+              <p class="item__descricao">Com recheio de brigadeiro caseiro e cobertura cremosa.</p>
+              <p class="item__detalhe">inteiro · serve 12 fatias</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Bolo de fubá cremoso</h4>
+                <p class="item__preco"><span>R$</span> 50</p>
+              </div>
+              <p class="item__descricao">Aquele de comer quentinho, com café coado do lado.</p>
+              <p class="item__detalhe">inteiro · serve 10 fatias</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Bolo de laranja</h4>
+                <p class="item__preco"><span>R$</span> 50</p>
+              </div>
+              <p class="item__descricao">Leve, perfumado e com calda de laranja no topo.</p>
+              <p class="item__detalhe">inteiro · serve 10 fatias</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Bolo de milho verde</h4>
+                <p class="item__preco"><span>R$</span> 52</p>
+              </div>
+              <p class="item__descricao">Sazonal, feito com milho da feira. Quando acaba, acabou.</p>
+              <p class="item__detalhe">inteiro · serve 10 fatias</p>
+            </li>
+            <li class="item item--destaque">
+              <span class="selo-item selo-item--mel">dezembro</span>
+              <div class="item__cabecalho">
+                <h4>Panetone caseiro</h4>
+                <p class="item__preco"><span>R$</span> 45</p>
+              </div>
+              <p class="item__descricao">Fruta cristalizada, muito recheio e cheirinho de Natal.</p>
+              <p class="item__detalhe">500 g · encomende com 5 dias</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grupo-cardapio revelar">
+          <h3 class="grupo-cardapio__titulo">Para beliscar</h3>
+          <ul class="grade-cards grade-cards--tres">
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Pão de queijo</h4>
+                <p class="item__preco"><span>R$</span> 15</p>
+              </div>
+              <p class="item__descricao">Casquinha crocante e muito queijo por dentro.</p>
+              <p class="item__detalhe">6 unidades</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Empada de frango</h4>
+                <p class="item__preco"><span>R$</span> 10</p>
+              </div>
+              <p class="item__descricao">Massa quebradinha com frango desfiado temperado.</p>
+              <p class="item__detalhe">unidade</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Torta de frango</h4>
+                <p class="item__preco"><span>R$</span> 16</p>
+              </div>
+              <p class="item__descricao">Fatia generosa, do jeito que almoço de bairro pede.</p>
+              <p class="item__detalhe">fatia</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="grupo-cardapio revelar">
+          <h3 class="grupo-cardapio__titulo">No balcão, na hora</h3>
+          <ul class="grade-cards grade-cards--tres">
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Café coado</h4>
+                <p class="item__preco"><span>R$</span> 6</p>
+              </div>
+              <p class="item__descricao">Passado na hora, forte do jeito certo.</p>
+              <p class="item__detalhe">xícara</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Café com leite</h4>
+                <p class="item__preco"><span>R$</span> 8</p>
+              </div>
+              <p class="item__descricao">A combinação que abre o dia do bairro.</p>
+              <p class="item__detalhe">xícara grande</p>
+            </li>
+            <li class="item">
+              <div class="item__cabecalho">
+                <h4>Cappuccino da casa</h4>
+                <p class="item__preco"><span>R$</span> 12</p>
+              </div>
+              <p class="item__descricao">Com canela e um toque de chocolate por cima.</p>
+              <p class="item__detalhe">xícara grande</p>
+            </li>
+          </ul>
+        </div>
+
+        <p class="cardapio__nota">Preços de retirada no balcão. Para entrega no bairro, combine pelo WhatsApp.</p>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="secao secao--papel" id="como-funciona">
+      <div class="container">
+        <header class="secao__cabecalho secao__cabecalho--centro revelar">
+          <p class="rabisco">é simples assim</p>
+          <h2>Encomendar leva menos de um minuto</h2>
+        </header>
+
+        <ol class="passos revelar">
+          <li class="passo">
+            <span class="passo__numero" aria-hidden="true">1</span>
+            <h3>Escolha o bolo</h3>
+            <p>Veja o cardápio e escolha o que você quer. Bolo inteiro é por encomenda.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__numero" aria-hidden="true">2</span>
+            <h3>Diga o dia</h3>
+            <p>O site mostra na hora se ainda tem vaga. São só 5 encomendas por dia.</p>
+          </li>
+          <li class="passo">
+            <span class="passo__numero" aria-hidden="true">3</span>
+            <h3>Confirme no WhatsApp</h3>
+            <p>A Dona Marta responde, combina o pagamento e guarda seu bolo no dia.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ENCOMENDA -->
+    <section class="secao secao--encomenda" id="encomendar">
+      <div class="container encomenda__grade">
+        <div class="encomenda__intro revelar">
+          <p class="rabisco">encomenda</p>
+          <h2>Reserve seu bolo</h2>
+          <p class="encomenda__texto">
+            Preencha os dados e a Dona Marta recebe a encomenda. Se preferir, o WhatsApp
+            já vai com tudo preenchido — é só enviar.
+          </p>
+
+          <ul class="lista-checks">
+            <li>Só 5 encomendas por dia</li>
+            <li>2 dias de antecedência para bolos</li>
+            <li>Pagamento na retirada: Pix, dinheiro ou cartão</li>
+          </ul>
+
+          <div class="cartao-ajuda">
+            <strong>Prefere falar com gente?</strong>
+            <p>Chame a Dona Marta no WhatsApp. Ela responde das 8h às 17h.</p>
+            <a class="link-whatsapp" href="https://wa.me/5583999999999?text=Ol%C3%A1%2C%20Dona%20Marta!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16L2 22l6.2-1.6a10.4 10.4 0 0 0 12.3-16.9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.4 7.7c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .6.5l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4-.1.6.5.9 1.6 2 2.5 2.4.2.1.4.1.6-.1l.7-.8c.2-.2.4-.3.7-.2l1.9.9c.3.1.5.2.5.4 0 .2 0 .9-.3 1.4-.3.6-1.4 1.2-2.2 1.2-2.3 0-5.6-1.7-7.3-5-.5-1-.6-1.8-.5-2.5.1-.5.5-1.1.7-1.6Z" fill="currentColor"/></svg>
+              Chamar no WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="encomenda__painel">
+          <form class="formulario" id="form-encomenda" novalidate>
+            <div class="campo">
+              <label for="nomeCliente">Seu nome</label>
+              <input type="text" id="nomeCliente" name="nomeCliente" autocomplete="name" placeholder="Como a Dona Marta te chama?" maxlength="80" required aria-describedby="erro-nomeCliente">
+              <p class="erro" id="erro-nomeCliente" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">WhatsApp com DDD</label>
+              <input type="tel" id="telefone" name="telefone" inputmode="tel" autocomplete="tel" placeholder="(83) 9 9999-9999" maxlength="16" required aria-describedby="erro-telefone">
+              <p class="erro" id="erro-telefone" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+              <label for="produto">O que você quer encomendar?</label>
+              <select id="produto" name="produto" required aria-describedby="erro-produto">
+                <option value="">Escolha no cardápio</option>
+                <optgroup label="Bolos por encomenda">
+                  <option value="Bolo de cenoura (inteiro)">Bolo de cenoura (inteiro) — R$ 55</option>
+                  <option value="Bolo de chocolate (inteiro)">Bolo de chocolate (inteiro) — R$ 65</option>
+                  <option value="Bolo de fubá cremoso (inteiro)">Bolo de fubá cremoso (inteiro) — R$ 50</option>
+                  <option value="Bolo de laranja (inteiro)">Bolo de laranja (inteiro) — R$ 50</option>
+                  <option value="Bolo de milho verde (inteiro)">Bolo de milho verde (inteiro) — R$ 52</option>
+                  <option value="Panetone caseiro (500 g)">Panetone caseiro (500 g) — R$ 45</option>
+                </optgroup>
+                <optgroup label="Para beliscar">
+                  <option value="Pão de queijo (6 unidades)">Pão de queijo (6 unidades) — R$ 15</option>
+                  <option value="Empada de frango">Empada de frango — R$ 10</option>
+                  <option value="Torta de frango (fatia)">Torta de frango (fatia) — R$ 16</option>
+                </optgroup>
+                <optgroup label="Cafés">
+                  <option value="Café coado">Café coado — R$ 6</option>
+                  <option value="Café com leite">Café com leite — R$ 8</option>
+                  <option value="Cappuccino da casa">Cappuccino da casa — R$ 12</option>
+                </optgroup>
+              </select>
+              <p class="erro" id="erro-produto" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+              <label for="dataEntrega">Dia da retirada</label>
+              <input type="date" id="dataEntrega" name="dataEntrega" required aria-describedby="vagas erro-dataEntrega">
+              <p class="vagas" id="vagas" role="status" aria-live="polite"></p>
+              <p class="erro" id="erro-dataEntrega" aria-live="polite"></p>
+            </div>
+
+            <div class="campo">
+              <label for="observacao">Alguma observação? <span>(opcional)</span></label>
+              <textarea id="observacao" name="observacao" rows="3" maxlength="300" placeholder="Ex.: sem cobertura, retirar às 16h, embalagem de presente…"></textarea>
+            </div>
+
+            <p class="formulario__aviso" id="aviso-form" role="status" aria-live="polite"></p>
+
+            <button class="botao botao--primario botao--largo" type="submit" id="botao-enviar">
+              <span class="botao__texto">Enviar encomenda</span>
+            </button>
+
+            <p class="formulario__nota">
+              Você não paga nada aqui. A Dona Marta confirma tudo pelo WhatsApp antes de preparar.
+              Seus dados são usados só para combinar esta encomenda.
+            </p>
+
+            <div class="aviso-offline" id="aviso-offline" hidden>
+              <p>Não conseguimos salvar no site agora. Sem problema: mande pelo WhatsApp que a Dona Marta anota no caderninho.</p>
+              <a class="botao botao--whatsapp botao--largo" id="link-offline" href="https://wa.me/5583999999999" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+            </div>
+          </form>
+
+          <div class="confirmacao" id="confirmacao" tabindex="-1" hidden>
+            <span class="confirmacao__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Encomenda anotada!</h3>
+            <p class="confirmacao__texto">A Dona Marta já recebeu. Falta só confirmar no WhatsApp para combinar o pagamento.</p>
+            <dl class="resumo" id="resumo-pedido"></dl>
+            <a class="botao botao--whatsapp botao--largo" id="confirmacao-whatsapp" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16L2 22l6.2-1.6a10.4 10.4 0 0 0 12.3-16.9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.4 7.7c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .6.5l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4-.1.6.5.9 1.6 2 2.5 2.4.2.1.4.1.6-.1l.7-.8c.2-.2.4-.3.7-.2l1.9.9c.3.1.5.2.5.4 0 .2 0 .9-.3 1.4-.3.6-1.4 1.2-2.2 1.2-2.3 0-5.6-1.7-7.3-5-.5-1-.6-1.8-.5-2.5.1-.5.5-1.1.7-1.6Z" fill="currentColor"/></svg>
+              Enviar resumo no WhatsApp
+            </a>
+            <button class="botao botao--fantasma botao--largo" type="button" id="nova-encomenda">Fazer outra encomenda</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="secao" id="sobre">
+      <div class="container sobre__grade">
+        <div class="sobre__texto revelar">
+          <p class="rabisco">quem faz</p>
+          <h2>Seis anos de bolo quentinho no mesmo endereço</h2>
+          <p>
+            A Dona Marta abriu o Café do Bairro há seis anos e nunca mudou de lugar.
+            Quem passa de manhã já sabe: tem café coado, pão de queijo saindo do forno
+            e um bolo novo na bancada.
+          </p>
+          <p>
+            Os bolos inteiros são o carro-chefe, quase sempre por encomenda.
+            Cada um sai da cozinha dela, com a receita que aprendeu em casa.
+            No máximo cinco por dia — porque bolo bom não tem pressa.
+          </p>
+
+          <ul class="lista-checks">
+            <li>Receita de família, sem mistura pronta</li>
+            <li>Feito no dia da retirada</li>
+            <li>O filho ajuda com as fotos do Instagram</li>
+          </ul>
+        </div>
+
+        <blockquote class="citacao revelar">
+          <svg class="citacao__aspas" viewBox="0 0 48 36" fill="none" aria-hidden="true">
+            <path d="M4 22c0-9 6-16 16-18v7c-5 1-8 4-8 8h8v14H4V22ZM26 22c0-9 6-16 16-18v7c-5 1-8 4-8 8h8v14H26V22Z" fill="#C9A57C"/>
+          </svg>
+          <p>“Bolo bom é o que a gente faz pensando em quem vai comer.”</p>
+          <footer>— Dona Marta, dona do Café do Bairro</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM X SITE -->
+    <section class="secao secao--papel" id="instagram">
+      <div class="container">
+        <header class="secao__cabecalho secao__cabecalho--centro revelar">
+          <p class="rabisco">instagram &amp; site</p>
+          <h2>A vitrine e o balcão</h2>
+          <p class="secao__descricao">
+            O Instagram continua sendo a vitrine do Café do Bairro. O site é o balcão:
+            onde a pessoa confere o cardápio, vê se tem vaga e encomenda sem precisar te chamar.
+          </p>
+        </header>
+
+        <div class="comparacao revelar">
+          <article class="comparacao__card">
+            <p class="comparacao__rotulo">no Instagram</p>
+            <h3>A vitrine</h3>
+            <ul>
+              <li>As fotos bonitas e as novidades do dia</li>
+              <li>O carinho de acompanhar o café de perto</li>
+              <li>As mensagens de “quanto custa?” e “que horas abre?”</li>
+            </ul>
+          </article>
+
+          <article class="comparacao__card comparacao__card--destaque">
+            <p class="comparacao__rotulo">aqui no site</p>
+            <h3>O balcão</h3>
+            <ul>
+              <li>Cardápio e preços sempre atualizados</li>
+              <li>Horário e endereço respondidos de uma vez</li>
+              <li>Vagas do dia e encomenda em um minuto</li>
+            </ul>
+            <a class="botao botao--primario" href="#encomendar">Fazer uma encomenda</a>
+          </article>
+        </div>
+
+        <div class="galeria revelar">
+          <figure class="galeria__foto">
+            <img src="assets/ilustracao-fatia.svg" width="240" height="240" alt="Fatia de bolo com recheio">
+            <figcaption>bolo do dia</figcaption>
+          </figure>
+          <figure class="galeria__foto">
+            <img src="assets/ilustracao-pao.svg" width="240" height="240" alt="Pães de queijo dourados">
+            <figcaption>saindo do forno</figcaption>
+          </figure>
+          <figure class="galeria__foto">
+            <img src="assets/ilustracao-cafe.svg" width="240" height="240" alt="Xícara de café com leite vista de cima">
+            <figcaption>café coado</figcaption>
+          </figure>
+          <p class="galeria__legenda">
+            Fotos novas todo dia no
+            <a href="https://www.instagram.com/cafedobairro" target="_blank" rel="noopener">@cafedobairro</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORÁRIO E ENDEREÇO -->
+    <section class="secao" id="horario">
+      <div class="container">
+        <header class="secao__cabecalho revelar">
+          <p class="rabisco">passa aqui</p>
+          <h2>Horário e onde fica</h2>
+          <p class="secao__descricao">No coração do bairro, pertinho de tudo. Vem tomar um café.</p>
+        </header>
+
+        <div class="info__grade revelar">
+          <article class="cartao-info">
+            <h3>Horário de funcionamento</h3>
+            <table class="horarios" id="tabela-horarios">
+              <tbody>
+                <tr data-dias="2,3,4,5">
+                  <th scope="row">Terça a sexta</th>
+                  <td>7h – 18h</td>
+                </tr>
+                <tr data-dias="6">
+                  <th scope="row">Sábado</th>
+                  <td>7h – 13h</td>
+                </tr>
+                <tr data-dias="0">
+                  <th scope="row">Domingo</th>
+                  <td>7h – 12h</td>
+                </tr>
+                <tr data-dias="1">
+                  <th scope="row">Segunda</th>
+                  <td>Fechado</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="nota">Encomendas são respondidas das 8h às 17h.</p>
+          </article>
+
+          <article class="cartao-info cartao-info--mapa" id="onde-fica">
+            <h3>Onde fica</h3>
+            <address>
+              Rua das Laranjeiras, 123<br>
+              Centro — João Pessoa/PB
+            </address>
+            <p>Ponto de referência: a duas quadras da praça do bairro.</p>
+            <a class="botao botao--fantasma" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+das+Laranjeiras+123+Centro+Jo%C3%A3o+Pessoa+PB" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.8"/></svg>
+              Abrir no Google Maps
+            </a>
+            <div class="mapa" aria-hidden="true">
+              <span class="mapa__rua mapa__rua--1"></span>
+              <span class="mapa__rua mapa__rua--2"></span>
+              <span class="mapa__rua mapa__rua--3"></span>
+              <span class="mapa__pino">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" fill="#B45434"/><circle cx="12" cy="10" r="2.6" fill="#FFF8F0"/></svg>
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DÚVIDAS -->
+    <section class="secao secao--duvidas" id="duvidas">
+      <div class="container">
+        <header class="secao__cabecalho secao__cabecalho--centro revelar">
+          <p class="rabisco">sem mistério</p>
+          <h2>Perguntas que a Dona Marta já respondeu mil vezes</h2>
+        </header>
+
+        <div class="faq revelar">
+          <details>
+            <summary>Preciso instalar algum aplicativo?</summary>
+            <p>Não. O site abre direto no navegador do celular. Se quiser, salve o link na tela inicial.</p>
+          </details>
+          <details>
+            <summary>Qual o prazo para encomendar?</summary>
+            <p>Bolos inteiros precisam de 2 dias de antecedência. Panetone e bolo de Natal, 5 dias. O site já mostra as datas disponíveis.</p>
+          </details>
+          <details>
+            <summary>Como faço o pagamento?</summary>
+            <p>Na retirada, com Pix, dinheiro ou cartão. A Dona Marta combina tudo pelo WhatsApp antes de preparar.</p>
+          </details>
+          <details>
+            <summary>E se o dia que eu quero estiver completo?</summary>
+            <p>O site avisa na hora. Você escolhe outra data ou chama no WhatsApp para ver se dá para encaixar.</p>
+          </details>
+          <details>
+            <summary>Preciso ter conta no Instagram?</summary>
+            <p>Não. O site tem tudo o que você precisa para encomendar. As fotos novas continuam no @cafedobairro.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAMADA FINAL -->
+    <section class="chamada-final">
+      <div class="container chamada-final__conteudo revelar">
+        <p class="rabisco">te espero aqui</p>
+        <h2>Deixe o bolo com a Dona Marta</h2>
+        <p>Escolha o sabor, diga o dia e pronto. O resto é café coado e conversa boa.</p>
+        <a class="botao botao--primario" href="#encomendar">Encomendar agora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <img src="assets/logo-xicara.svg" alt="" width="52" height="52">
+        <div>
+          <strong>Café do Bairro</strong>
+          <p>Bolos caseiros, café coado e um lugar de bairro.</p>
+        </div>
+      </div>
+
+      <nav class="rodape__nav" aria-label="Links do rodapé">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#encomendar">Encomendar</a>
+        <a href="#horario">Horário</a>
+        <a href="#onde-fica">Endereço</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+
+      <div class="rodape__contato">
+        <a href="https://wa.me/5583999999999" target="_blank" rel="noopener">(83) 99999-9999</a>
+        <a href="https://www.instagram.com/cafedobairro" target="_blank" rel="noopener">@cafedobairro</a>
+      </div>
+    </div>
+
+    <div class="container rodape__base">
+      <p>© <span id="ano">2026</span> Café do Bairro · Rua das Laranjeiras, 123 · João Pessoa/PB</p>
+      <p class="rodape__credito">Site feito pela <strong>TecnoJr</strong></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-flutuante" href="https://wa.me/5583999999999?text=Ol%C3%A1%2C%20Dona%20Marta!%20Quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener" aria-label="Falar com o Café do Bairro no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.5 3.5A10.4 10.4 0 0 0 3.6 16L2 22l6.2-1.6a10.4 10.4 0 0 0 12.3-16.9Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.4 7.7c.2-.5.4-.5.7-.5h.6c.2 0 .4 0 .6.5l.8 1.9c.1.3 0 .5-.1.7l-.6.7c-.2.2-.2.4-.1.6.5.9 1.6 2 2.5 2.4.2.1.4.1.6-.1l.7-.8c.2-.2.4-.3.7-.2l1.9.9c.3.1.5.2.5.4 0 .2 0 .9-.3 1.4-.3.6-1.4 1.2-2.2 1.2-2.3 0-5.6-1.7-7.3-5-.5-1-.6-1.8-.5-2.5.1-.5.5-1.1.7-1.6Z" fill="currentColor"/></svg>
+  </a>
+
+  <nav class="barra-inferior" aria-label="Atalhos no celular">
+    <a href="#cardapio">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Cardápio
+    </a>
+    <a href="#encomendar">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 8h12l1 12H5L6 8Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Encomendar
+    </a>
+    <a href="#horario">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Horário
+    </a>
+    <a href="#onde-fica">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.8"/></svg>
+      Onde fica
+    </a>
+  </nav>
+
+  <noscript>
+    <p class="aviso-noscript">O formulário precisa de JavaScript. Sem ele, chame a Dona Marta no WhatsApp: (83) 99999-9999.</p>
+  </noscript>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

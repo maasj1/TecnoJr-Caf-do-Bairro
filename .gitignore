@@ -1,0 +1,29 @@
+# Dependências (o projeto não usa nenhuma, mas evita lixo se alguém instalar algo)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dados locais da API
+backend/data/*.json
+backend/data/*.tmp
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Cobertura e logs
+coverage/
+*.log

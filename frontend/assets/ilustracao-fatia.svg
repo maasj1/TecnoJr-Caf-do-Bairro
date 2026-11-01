@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none" role="img" aria-label="Ilustração de uma fatia de bolo">
+  <rect width="240" height="240" rx="24" fill="#F6E7CF"/>
+  <ellipse cx="120" cy="196" rx="82" ry="17" fill="#FFFBF4" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M64 156 120 176l48-34v-14l-48 26-56-22Z" fill="#E0A96E" stroke="#3A2A20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M64 156v20l56 22 48-30v-26l-48 26Z" fill="#E8B77E" stroke="#3A2A20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M64 132v24l56 22 48-26v-22l-48 26Z" fill="#8C5A38" stroke="#3A2A20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M64 132l56 22 48-26-12-10-36 18-56-20Z" fill="#F8E8D1" stroke="#3A2A20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M96 145v18M130 148v22" stroke="#F8E8D1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M176 114c-14-6-26 4-24 16 12 4 24-4 24-16Z" fill="#7C8A5A" stroke="#4F5E38" stroke-width="2.4"/>
+</svg>

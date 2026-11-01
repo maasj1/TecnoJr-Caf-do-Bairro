@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" fill="none" role="img" aria-label="Ilustração de um bolo de cenoura com cobertura de chocolate e uma xícara de café">
+  <path d="M55 128c8-58 84-92 166-84s176 36 190 106-26 142-96 170-184 14-232-48S47 186 55 128Z" fill="#F6E7CF"/>
+  <path d="M26 340h428" stroke="#DFC6A6" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- prato -->
+  <ellipse cx="212" cy="330" rx="160" ry="27" fill="#FFFBF4" stroke="#3A2A20" stroke-width="3"/>
+  <ellipse cx="212" cy="327" rx="126" ry="19" stroke="#E6D3B8" stroke-width="2.5"/>
+
+  <!-- bolo -->
+  <path d="M105 225v69a18 18 0 0 0 18 18h174a18 18 0 0 0 18-18v-69Z" fill="#E0A96E" stroke="#3A2A20" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M114 264h196M114 292h196" stroke="#F8E8D1" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="210" cy="225" rx="105" ry="22" fill="#6B4226" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M138 238c0 20 4 28 10 28s10-8 10-28Z" fill="#6B4226"/>
+  <path d="M238 243c0 18 4 26 10 26s10-8 10-26Z" fill="#6B4226"/>
+  <path d="M286 232c0 16 4 24 9 24s9-8 9-24Z" fill="#6B4226"/>
+
+  <!-- fatia marcada no topo -->
+  <path d="M210 225 254 243 210 243Z" fill="#F8E8D1" stroke="#3A2A20" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M228 233h13" stroke="#D89A5F" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- florzinha -->
+  <g stroke="#3A2A20" stroke-width="2">
+    <circle cx="166" cy="210" r="5.5" fill="#FFF6E6"/>
+    <circle cx="157" cy="205" r="5.5" fill="#FFF6E6"/>
+    <circle cx="175" cy="205" r="5.5" fill="#FFF6E6"/>
+    <circle cx="157" cy="217" r="5.5" fill="#FFF6E6"/>
+    <circle cx="175" cy="217" r="5.5" fill="#FFF6E6"/>
+    <circle cx="166" cy="211" r="4" fill="#E2A94F"/>
+  </g>
+
+  <!-- xícara -->
+  <ellipse cx="393" cy="328" rx="56" ry="13" fill="#FFFBF4" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M358 256h68l-6 48a30 12 0 0 1-56 0Z" fill="#FFF9F0" stroke="#3A2A20" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="392" cy="256" rx="34" ry="9" fill="#6B4226" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M426 268a16 16 0 0 1 0 30" stroke="#3A2A20" stroke-width="3.4" stroke-linecap="round"/>
+  <path d="M377 236c-9-10 9-15 0-28M401 238c-9-10 9-15 0-28" stroke="#A9714B" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- raminho -->
+  <path d="M64 332c4-16 10-28 26-40" stroke="#4F5E38" stroke-width="3" stroke-linecap="round"/>
+  <path d="M74 314c-15 2-21-8-19-17 11-2 20 5 19 17Z" fill="#7C8A5A" stroke="#4F5E38" stroke-width="2.4"/>
+  <path d="M84 300c-4-14 4-21 13-22 4 10-2 19-13 22Z" fill="#7C8A5A" stroke="#4F5E38" stroke-width="2.4"/>
+  <path d="M80 321c12 6 21 1 24-8-9-5-20-2-24 8Z" fill="#95A16E" stroke="#4F5E38" stroke-width="2.4"/>
+
+  <!-- migalhas -->
+  <circle cx="342" cy="322" r="3" fill="#C9A57C"/>
+  <circle cx="356" cy="329" r="2.2" fill="#C9A57C"/>
+  <circle cx="120" cy="324" r="2.6" fill="#C9A57C"/>
+</svg>

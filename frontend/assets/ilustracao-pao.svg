@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none" role="img" aria-label="Ilustração de pães de queijo">
+  <rect width="240" height="240" rx="24" fill="#F6E7CF"/>
+  <path d="M46 126c6-30 44-44 84-40s64 26 60 48-34 36-76 34-74-18-68-42Z" fill="#F1DCBE"/>
+  <ellipse cx="120" cy="184" rx="84" ry="19" fill="#FFFBF4" stroke="#3A2A20" stroke-width="3"/>
+  <ellipse cx="120" cy="180" rx="64" ry="12" stroke="#E6D3B8" stroke-width="2.5"/>
+  <circle cx="86" cy="158" r="24" fill="#E3B26F" stroke="#3A2A20" stroke-width="3"/>
+  <circle cx="122" cy="166" r="22" fill="#D9A45F" stroke="#3A2A20" stroke-width="3"/>
+  <circle cx="157" cy="156" r="23" fill="#E8BC7D" stroke="#3A2A20" stroke-width="3"/>
+  <path d="M78 146c4-4 9-5 14-3M114 156c4-4 9-4 13-2M149 145c4-3 9-3 13-1" stroke="#FFF3DE" stroke-width="4" stroke-linecap="round"/>
+  <path d="M84 170c6 3 12 3 17 0M154 168c5 2 10 2 14 0" stroke="#B47F45" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M112 96c-8-9 7-13 0-24M132 98c-8-9 7-13 0-24" stroke="#A9714B" stroke-width="4" stroke-linecap="round"/>
+</svg>

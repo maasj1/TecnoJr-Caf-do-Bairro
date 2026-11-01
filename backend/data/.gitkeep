@@ -1,0 +1,3 @@
+# Mantém a pasta `data/` no repositório.
+# O arquivo pedidos.json é criado automaticamente na primeira execução
+# e é ignorado pelo .gitignore.
