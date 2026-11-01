@@ -169,6 +169,7 @@ JSON inválido e persistência em arquivo.
   mensagem pós-reunião, versão curta, roteiro de áudio, objeções (“sobrinho por R$ 300” e
   “já tenho Instagram”), estratégia para o Seu Jorge, três perguntas para a segunda reunião
   e cronograma até 30/11.
+- **Documento comercial:** [Mensagem pós-reunião — Google Docs](https://docs.google.com/document/d/1A8fjo8TZEBFONR0Ktx_0QfBalXcWmB95LZB14Qdu4u0/edit?usp=sharing).
 
 > O design mobile foi gerado pelo plugin local do Figma (`figma-plugin/`); o mockup HTML em
 > `design/mockup-mobile.html` segue como referência viva da experiência. Para abrir no
